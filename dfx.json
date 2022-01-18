@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "bucket":{
+      "main":"src/Bucket/Storage/bucket.mo",
+      "type":"motoko"
+    },
+    "Bucket_assets": {
+      "dependencies": [
+        "bucket"
+      ],
+      "frontend": {
+        "entrypoint": "src/Bucket_assets/src/index.html"
+      },
+      "source": [
+        "src/Bucket_assets/assets",
+        "dist/Bucket_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

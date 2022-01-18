@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    background: #f0f2f5;
+    height: 80px;
+}
+
+.header img {
+    height: 50px;
+    width: 100px;
+}
+
+
+.header span {
+    font-size: 35px;
+    margin-left: 20px;
+}

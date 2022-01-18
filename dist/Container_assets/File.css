@@ -1,0 +1,51 @@
+.title .drop {
+  cursor: pointer;
+  width: 520px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  color: #bdbdbd;
+  outline: none;
+  margin: auto;
+}
+.title .uploadBac {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fafafc;
+}
+.title .uploadBac p {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 0px !important;
+}
+
+.uploadBac .icon svg {
+  width: 35px;
+  height: 35px;
+}
+.fileTable .ant-table-tbody > tr > td {
+  max-width: 300px;
+}
+.showTable {
+  width: 100%;
+  position: relative;
+}
+.showTable .ant-spin-container {
+  transition: all 2s ease;
+}
+.action_bac {
+  width: 100%;
+  height: 32px;
+  bottom: 15px;
+  position: absolute;
+}
+.showTable .ant-pagination-prev,
+.showTable .ant-pagination-next,
+.showTable .ant-pagination-item {
+  z-index: 1;
+}
+.Action {
+  position: absolute;
+  right: 200px;
+}

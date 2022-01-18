@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkContainer_assets=self.webpackChunkContainer_assets||[]).push([[116],{7116:(e,s,n)=>{n.r(s),n.d(s,{default:()=>r});var t=n(7294);class a extends t.Component{render(){return t.createElement("div",null)}}const r=a}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkContainer_assets=self.webpackChunkContainer_assets||[]).push([[918],{1918:(e,n,s)=>{s.r(n),s.d(n,{default:()=>a});var t=s(7294);const a=function(){return t.createElement("div",null)}}}]);

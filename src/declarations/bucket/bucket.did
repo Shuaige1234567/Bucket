@@ -1,0 +1,91 @@
+type State = 
+ record {
+   balance: nat;
+   heapSize: nat;
+   memorySize: nat;
+ };
+type Result_3 = 
+ variant {
+   err: text;
+   ok: bool;
+ };
+type Result_2 = 
+ variant {
+   err: text;
+   ok: vec blob;
+ };
+type Result_1 = 
+ variant {
+   err: text;
+   ok: vec AssetExt;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: AssetExt;
+ };
+type PUT = 
+ record {
+   chunk: Chunk;
+   chunk_number: nat;
+   file_extension: FileExtension;
+   file_key: text;
+   file_name: text;
+   order: nat;
+ };
+type GET = 
+ record {
+   file_key: text;
+   flag: nat;
+ };
+type FileExtension = 
+ variant {
+   aac;
+   avi;
+   doc;
+   docs;
+   gif;
+   jpeg;
+   jpg;
+   mp3;
+   mp4;
+   png;
+   ppt;
+   svg;
+   txt;
+   wav;
+ };
+type Chunk = 
+ record {
+   data: blob;
+   digest: vec nat8;
+ };
+type Bucket = 
+ service {
+   avlSM: () -> (nat) query;
+   canisterState: () -> (State) query;
+   clearall: () -> (Result_3);
+   cycle_balance: () -> (nat) query;
+   deletekey: (text) -> (Result_3);
+   deletename: (text) -> (Result_3);
+   get: (GET) -> (Result_2) query;
+   getAssetExtFilename: (text) -> (Result) query;
+   getAssetExtkey: (text) -> (Result) query;
+   getAssetExts: () -> (Result_1) query;
+   postUpgrade: () -> ();
+   preUpgrade: () -> ();
+   put: (PUT) -> (Result);
+   setBufferCanister: (text) -> ();
+   wallet_receive: () -> (nat);
+ };
+type AssetExt = 
+ record {
+   bucket_id: principal;
+   file_extension: FileExtension;
+   file_key: text;
+   file_name: text;
+   need_query_times: nat;
+   total_size: nat;
+   upload_status: bool;
+ };
+service : () -> Bucket
